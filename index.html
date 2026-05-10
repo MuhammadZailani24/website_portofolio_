@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Zailani - Portofolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#09090b',
+                        secondary: '#71717a',
+                        accent: '#2563eb',
+                        accentHover: '#1d4ed8',
+                        light: '#f4f4f5',
+                        card: '#ffffff'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased bg-light selection:bg-accent selection:text-white relative">
+
+    <nav id="navbar" class="fixed w-full top-0 z-50 glass-nav py-4">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight text-primary">MZ<span class="text-accent">.</span></a>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#beranda" class="text-sm font-medium text-secondary hover:text-accent transition-colors">Beranda</a>
+                <a href="#tentang" class="text-sm font-medium text-secondary hover:text-accent transition-colors">Tentang</a>
+                <a href="#proyek" class="text-sm font-medium text-secondary hover:text-accent transition-colors">Proyek</a>
+                <a href="#sertifikat" class="text-sm font-medium text-secondary hover:text-accent transition-colors">Sertifikat</a>
+                <a href="#kontak" class="px-5 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-accentHover transition-colors shadow-md hover:shadow-lg">Hubungi Saya</a>
+            </div>
+
+            <button class="md:hidden text-primary focus:outline-none" aria-label="Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="beranda" class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6">
+        <div class="container mx-auto max-w-6xl flex flex-col-reverse md:flex-row items-center gap-12">
+            <div class="flex-1 text-center md:text-left fade-in-up">
+                <span class="inline-block py-1.5 px-4 rounded-full bg-blue-100/50 text-accent text-sm font-bold mb-6 tracking-wide border border-blue-200">
+                    Halo, selamat datang! 👋
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight tracking-tight">
+                    Saya <br class="hidden md:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-indigo-500">Muhammad Zailani</span>
+                </h1>
+                <p class="text-lg md:text-xl text-secondary mb-10 max-w-2xl md:mx-0 mx-auto leading-relaxed">
+                    Seorang Mahasiswa Teknik Informatika di <span class="font-semibold text-primary">UNISKA MAB Banjarmasin</span>. Membangun solusi digital dengan desain minimalis dan kode yang rapi.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="#proyek" class="px-8 py-4 bg-primary text-white rounded-full font-medium hover:bg-black transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                        Lihat Karya Saya
+                    </a>
+                    <a href="#kontak" class="px-8 py-4 bg-white text-primary border border-gray-200 rounded-full font-medium hover:border-gray-300 hover:bg-gray-50 transition-all shadow-sm">
+                        Mari Berdiskusi
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex-1 flex justify-center md:justify-end fade-in-up" style="transition-delay: 200ms;">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl bg-gray-100 group">
+                    <img src="assets/img/profil/Foto Profile.jpg" alt="Foto Profil Muhammad Zailani" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="tentang" class="py-24 bg-card px-6 border-y border-gray-100">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Fokus & Keahlian</h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="p-8 rounded-3xl bg-blue-50 hover:bg-white border border-blue-100 hover:border-blue-300 modern-card fade-in-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-code text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Pengembangan Web</h3>
+                    <p class="text-secondary leading-relaxed">Menulis kode HTML, CSS, PHP, dan JavaScript yang bersih dan terstruktur untuk antarmuka responsif.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-purple-50 hover:bg-white border border-purple-100 hover:border-purple-300 modern-card fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-pen-nib text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-900 mb-3">Desain Antarmuka</h3>
+                    <p class="text-secondary leading-relaxed">Merancang layout minimalis dengan Tailwind CSS yang fokus pada pengalaman pengguna (UX) dan visual (UI).</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-emerald-50 hover:bg-white border border-emerald-100 hover:border-emerald-300 modern-card fade-in-up" style="transition-delay: 300ms;">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-mobile-screen text-2xl text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-emerald-900 mb-3">Mobile Development</h3>
+                    <p class="text-secondary leading-relaxed">Membangun aplikasi mobile cross-platform yang modern dan cepat menggunakan framework Flutter.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-rose-50 hover:bg-white border border-rose-100 hover:border-rose-300 modern-card fade-in-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-database text-2xl text-rose-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-rose-900 mb-3">Database Management</h3>
+                    <p class="text-secondary leading-relaxed">Merancang sistem basis data relasional seperti MySQL dengan normalisasi yang baik dan efisien.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-indigo-50 hover:bg-white border border-indigo-100 hover:border-indigo-300 modern-card fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-brain text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-indigo-900 mb-3">Artificial Intelligence</h3>
+                    <p class="text-secondary leading-relaxed">Mempelajari algoritma machine learning menggunakan Python untuk mengembangkan sistem cerdas.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-teal-50 hover:bg-white border border-teal-100 hover:border-teal-300 modern-card fade-in-up" style="transition-delay: 300ms;">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-diagram-project text-2xl text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-teal-900 mb-3">System Analysis</h3>
+                    <p class="text-secondary leading-relaxed">Menganalisis sistem menggunakan DFD, ERD, dan Flowchart untuk perancangan aplikasi yang terstruktur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyek" class="py-24 bg-light px-6">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex justify-between items-end mb-12 fade-in-up">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Proyek Nyata</h2>
+                    <div class="w-16 h-1 bg-accent rounded-full"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="modern-card bg-blue-50 border border-blue-100 hover:border-blue-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Aplikasi Agen Mandirilink.png" alt="Aplikasi Agen Mandirilink" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-blue-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-blue-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-blue-700 shadow-sm border border-blue-200">HTML CSS</span>
+                            <span class="px-3 py-1 bg-blue-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-blue-700 shadow-sm border border-blue-200">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Aplikasi Agen Mandirilink</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Aplikasi mobile operasional agen perbankan untuk mempermudah transaksi keuangan dan layanan perbankan digital.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-purple-50 border border-purple-100 hover:border-purple-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Aplikasi Pembelajaran Interaktif Matematika SD.png" alt="Aplikasi Pembelajaran Interaktif Matematika SD" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-purple-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-purple-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-purple-700 shadow-sm border border-purple-200">HTML5</span>
+                            <span class="px-3 py-1 bg-purple-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-purple-700 shadow-sm border border-purple-200">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Aplikasi Pembelajaran Matematika</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Media pembelajaran interaktif berbasis visual untuk membantu siswa SD memahami konsep matematika dasar dengan menyenangkan.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-emerald-50 border border-emerald-100 hover:border-emerald-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Heal Time Pengingat Obat.png" alt="Heal Time Pengingat Obat" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-emerald-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-emerald-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-emerald-700 shadow-sm border border-emerald-200">HTML 5</span>
+                            <span class="px-3 py-1 bg-emerald-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-emerald-700 shadow-sm border border-emerald-200">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-900 mb-2">Heal Time: Pengingat Obat</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Aplikasi mobile pengingat jadwal minum obat untuk membantu pasien menjaga kepatuhan dan efektivitas pengobatan harian.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-rose-50 border border-rose-100 hover:border-rose-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Siakad SMK Negr 20 Batola.png" alt="Siakad SMK Negr 20 Batola" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-rose-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-rose-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-rose-700 shadow-sm border border-rose-200">PHP</span>
+                            <span class="px-3 py-1 bg-rose-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-rose-700 shadow-sm border border-rose-200">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-rose-900 mb-2">SIAKAD SMK Negr 20 Batola</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Sistem Informasi Akademik berbasis web untuk memanajemen data siswa, absensi, dan nilai di sekolah secara terpusat.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-indigo-50 border border-indigo-100 hover:border-indigo-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Sistem Deteksi Jenis Kulit Wajah Berbasis AI.png" alt="Sistem Deteksi Jenis Kulit Wajah Berbasis AI" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-indigo-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-indigo-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-indigo-700 shadow-sm border border-indigo-200">Python</span>
+                            <span class="px-3 py-1 bg-indigo-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-indigo-700 shadow-sm border border-indigo-200">TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-indigo-900 mb-2">Deteksi Jenis Kulit Wajah AI</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Implementasi kecerdasan buatan untuk mengklasifikasi jenis kulit wajah pengguna guna memberikan rekomendasi perawatan yang akurat.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-teal-50 border border-teal-100 hover:border-teal-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Sistem Deteksi PEnyakit Daun Sawit Berbasis AI CNN.png" alt="Sistem Deteksi PEnyakit Daun Sawit Berbasis AI CNN" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-teal-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-teal-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-teal-700 shadow-sm border border-teal-200">Python</span>
+                            <span class="px-3 py-1 bg-teal-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-teal-700 shadow-sm border border-teal-200">CNN Model</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-teal-900 mb-2">Deteksi Penyakit Daun Sawit</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Model Deep Learning menggunakan arsitektur CNN untuk mendeteksi berbagai jenis penyakit pada citra daun kelapa sawit.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-blue-50 border border-blue-100 hover:border-blue-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Sistem Deteksi Penyakit Ringan Berbasis AI Random Forest.png" alt="Sistem Deteksi Penyakit Ringan Berbasis AI Random Forest" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-blue-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-blue-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-blue-700 shadow-sm border border-blue-200">Scikit-Learn</span>
+                            <span class="px-3 py-1 bg-blue-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-blue-700 shadow-sm border border-blue-200">Python</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Sistem Pakar Penyakit Ringan</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Aplikasi dengan algoritma Random Forest untuk mendiagnosis penyakit ringan berdasarkan klasifikasi gejala dari pengguna.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-purple-50 border border-purple-100 hover:border-purple-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Sistem Informasi Manajemen Apotek Berkah Farma.png" alt="Sistem Informasi Manajemen Apotek Berkah Farma" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-purple-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-purple-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-purple-700 shadow-sm border border-purple-200">Laravel</span>
+                            <span class="px-3 py-1 bg-purple-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-purple-700 shadow-sm border border-purple-200">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Manajemen Apotek Berkah Farma</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Aplikasi manajemen data dan transaksi apotek untuk memantau ketersediaan stok obat dan riwayat penjualan harian.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-emerald-50 border border-emerald-100 hover:border-emerald-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Sistem Informasi Pelayanan Desa Terpadu Jelapat 1.png" alt="Sistem Informasi Pelayanan Desa Terpadu Jelapat 1" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-emerald-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-emerald-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-emerald-700 shadow-sm border border-emerald-200">Flask</span>
+                            <span class="px-3 py-1 bg-emerald-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-emerald-700 shadow-sm border border-emerald-200">Python</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-emerald-900 mb-2">Sistem Pelayanan Desa Jelapat 1</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Portal digital pelayanan administrasi dan informasi pemerintah desa berbasis web untuk masyarakat Desa Jelapat 1 Barito Kuala.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-rose-50 border border-rose-100 hover:border-rose-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Sistem Pemesanan Dynastic Gym.png" alt="Sistem Pemesanan Dynastic Gym" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-rose-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-rose-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-rose-700 shadow-sm border border-rose-200">PHP</span>
+                            <span class="px-3 py-1 bg-rose-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-rose-700 shadow-sm border border-rose-200">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-rose-900 mb-2">Sistem Pemesanan Dynastic Gym</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Platform reservasi jadwal latihan dan manajemen keanggotaan (membership) untuk fasilitas kebugaran secara efisien.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-indigo-50 border border-indigo-100 hover:border-indigo-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Sistem Penunjang Keputusan Berbasis AI.png" alt="Sistem Penunjang Keputusan Berbasis AI" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-indigo-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-indigo-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-indigo-700 shadow-sm border border-indigo-200">Python</span>
+                            <span class="px-3 py-1 bg-indigo-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-indigo-700 shadow-sm border border-indigo-200">AI Logic</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-indigo-900 mb-2">Sistem Penunjang Keputusan AI</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Aplikasi Sistem Pendukung Keputusan (SPK) yang diintegrasikan dengan AI untuk membantu analisis dan rekomendasi alternatif terbaik.</p>
+                    </div>
+                </div>
+
+                <div class="modern-card bg-teal-50 border border-teal-100 hover:border-teal-300 rounded-3xl overflow-hidden fade-in-up">
+                    <div class="card-image-container h-56 bg-white w-full relative group">
+                        <img src="assets/img/proyek/Website Warung Es Mama Zai.png" alt="Website Warung Es Mama Zai" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-90">
+                        <div class="absolute inset-0 bg-teal-900/20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
+                        </div>
+                        <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
+                            <span class="px-3 py-1 bg-teal-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-teal-700 shadow-sm border border-teal-200">HTML</span>
+                            <span class="px-3 py-1 bg-teal-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-teal-700 shadow-sm border border-teal-200">Tailwind</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-teal-900 mb-2">Website Warung Es Mama Zai</h3>
+                        <p class="text-secondary text-sm mb-4 line-clamp-2">Profil usaha dan katalog menu digital untuk UMKM guna memperluas jangkauan promosi serta memudahkan pesanan dari pelanggan.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sertifikat" class="py-24 bg-card px-6 border-y border-gray-100">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Sertifikat & Pencapaian</h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded-full mb-6"></div>
+                <p class="text-secondary max-w-2xl mx-auto">
+                    Bukti komitmen saya dalam terus belajar. Klik gambar untuk melihat ukuran penuh.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-blue-50 border border-blue-100 hover:border-blue-300">
+                    <div class="w-full h-36 bg-white border border-blue-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/- E-Certificate SC UIUX Fundamental MySkill Agustus 2023-page-00001.jpg" alt="UIUX Fundamental" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-blue-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-blue-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-wider">MySkill</p>
+                    <h3 class="text-base font-bold text-blue-900 mb-1">UI/UX Fundamental</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-purple-50 border border-purple-100 hover:border-purple-300" style="transition-delay: 100ms;">
+                    <div class="w-full h-36 bg-white border border-purple-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/AD ZAILANI - E-Certificate SC Excel MySkill Agustus 2023-page-00001.jpg" alt="Excel MySkill" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-purple-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-purple-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-purple-600 mb-1 uppercase tracking-wider">MySkill</p>
+                    <h3 class="text-base font-bold text-purple-900 mb-1">Microsoft Excel</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-emerald-50 border border-emerald-100 hover:border-emerald-300" style="transition-delay: 200ms;">
+                    <div class="w-full h-36 bg-white border border-emerald-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/AMMAD ZAILANI - E-Certificate SC HR MySkill Agustus 2023-page-00001.jpg" alt="HR MySkill" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-emerald-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-emerald-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-emerald-600 mb-1 uppercase tracking-wider">MySkill</p>
+                    <h3 class="text-base font-bold text-emerald-900 mb-1">Human Resources (HR)</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-rose-50 border border-rose-100 hover:border-rose-300">
+                    <div class="w-full h-36 bg-white border border-rose-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Dasar Pengembang Software-page-00001.jpg" alt="Dasar Pengembang Software" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-rose-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-rose-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-rose-600 mb-1 uppercase tracking-wider">Dicoding Indonesia</p>
+                    <h3 class="text-base font-bold text-rose-900 mb-1">Dasar Pengembang Software</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-indigo-50 border border-indigo-100 hover:border-indigo-300">
+                    <div class="w-full h-36 bg-white border border-indigo-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Front END CSS-page-00001.jpg" alt="Front END CSS" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-indigo-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-indigo-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-indigo-600 mb-1 uppercase tracking-wider">MySkill</p>
+                    <h3 class="text-base font-bold text-indigo-900 mb-1">Front End CSS</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-teal-50 border border-teal-100 hover:border-teal-300">
+                    <div class="w-full h-36 bg-white border border-teal-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Front End HTML-page-00001.jpg" alt="Front End HTML" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-teal-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-teal-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-teal-600 mb-1 uppercase tracking-wider">MySkill</p>
+                    <h3 class="text-base font-bold text-teal-900 mb-1">Front End HTML</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-blue-50 border border-blue-100 hover:border-blue-300">
+                    <div class="w-full h-36 bg-white border border-blue-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Intro Data Analys-page-00001.jpg" alt="Intro Data Analys" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-blue-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-blue-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-wider">MySkill</p>
+                    <h3 class="text-base font-bold text-blue-900 mb-1">Intro Data Analysis</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-purple-50 border border-purple-100 hover:border-purple-300">
+                    <div class="w-full h-36 bg-white border border-purple-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/JavaScript Dasar-page-00001.jpg" alt="JavaScript Dasar" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-purple-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-purple-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-purple-600 mb-1 uppercase tracking-wider">Dicoding Indonesia</p>
+                    <h3 class="text-base font-bold text-purple-900 mb-1">JavaScript Dasar</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-emerald-50 border border-emerald-100 hover:border-emerald-300">
+                    <div class="w-full h-36 bg-white border border-emerald-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum Android-page-00001.jpg" alt="Praktikum Android" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-emerald-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-emerald-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-emerald-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-emerald-900 mb-1">Praktikum Android</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-rose-50 border border-rose-100 hover:border-rose-300">
+                    <div class="w-full h-36 bg-white border border-rose-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum Data Science-page-00001.jpg" alt="Praktikum Data Science" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-rose-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-rose-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-rose-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-rose-900 mb-1">Praktikum Data Science</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-indigo-50 border border-indigo-100 hover:border-indigo-300">
+                    <div class="w-full h-36 bg-white border border-indigo-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum Desain Grafis-page-00001.jpg" alt="Praktikum Desain Grafis" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-indigo-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-indigo-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-indigo-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-indigo-900 mb-1">Praktikum Desain Grafis</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-teal-50 border border-teal-100 hover:border-teal-300">
+                    <div class="w-full h-36 bg-white border border-teal-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum Jaringan Komputer 2-page-00001.jpg" alt="Praktikum Jaringan Komputer 2" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-teal-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-teal-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-teal-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-teal-900 mb-1">Praktikum Jaringan Komputer 2</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-blue-50 border border-blue-100 hover:border-blue-300">
+                    <div class="w-full h-36 bg-white border border-blue-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum Pemrograman Web 1-page-00001.jpg" alt="Praktikum Pemrograman Web 1" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-blue-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-blue-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-blue-900 mb-1">Praktikum Pemrog Web 1</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-purple-50 border border-purple-100 hover:border-purple-300">
+                    <div class="w-full h-36 bg-white border border-purple-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum Pemrograman Web 2-page-00001.jpg" alt="Praktikum Pemrograman Web 2" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-purple-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-purple-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-purple-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-purple-900 mb-1">Praktikum Pemrog Web 2</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-emerald-50 border border-emerald-100 hover:border-emerald-300">
+                    <div class="w-full h-36 bg-white border border-emerald-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum PPN-page-00001.jpg" alt="Praktikum PPN" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-emerald-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-emerald-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-emerald-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-emerald-900 mb-1">Praktikum PPN</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-rose-50 border border-rose-100 hover:border-rose-300">
+                    <div class="w-full h-36 bg-white border border-rose-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum Sistem Basis Data 1-page-00001.jpg" alt="Praktikum Sistem Basis Data 1" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-rose-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-rose-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-rose-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-rose-900 mb-1">Praktikum Sistem Basis Data 1</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-indigo-50 border border-indigo-100 hover:border-indigo-300">
+                    <div class="w-full h-36 bg-white border border-indigo-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Praktikum Sistem Basis Data 2-page-00001.jpg" alt="Praktikum Sistem Basis Data 2" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-indigo-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-indigo-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-indigo-600 mb-1 uppercase tracking-wider">UNISKA MAB Banjarmasin</p>
+                    <h3 class="text-base font-bold text-indigo-900 mb-1">Praktikum Sistem Basis Data 2</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-teal-50 border border-teal-100 hover:border-teal-300">
+                    <div class="w-full h-36 bg-white border border-teal-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Rest API Sertifikat.jpg" alt="Rest API Sertifikat" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-teal-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-teal-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-teal-600 mb-1 uppercase tracking-wider">Belajar Skill id</p>
+                    <h3 class="text-base font-bold text-teal-900 mb-1">Rest API Sertifikat</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-blue-50 border border-blue-100 hover:border-blue-300">
+                    <div class="w-full h-36 bg-white border border-blue-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Sertifikat Dasar Manajemen Proyek-page-00001.jpg" alt="Sertifikat Dasar Manajemen Proyek" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-blue-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-blue-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-blue-600 mb-1 uppercase tracking-wider">Dicoding Indonesia</p>
+                    <h3 class="text-base font-bold text-blue-900 mb-1">Dasar Manajemen Proyek</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-purple-50 border border-purple-100 hover:border-purple-300">
+                    <div class="w-full h-36 bg-white border border-purple-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Sertifikat Dasar Sql-page-00001.jpg" alt="Sertifikat Dasar Sql" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-purple-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-purple-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-purple-600 mb-1 uppercase tracking-wider">Dicoding Indonesia</p>
+                    <h3 class="text-base font-bold text-purple-900 mb-1">Sertifikat Dasar SQL</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-emerald-50 border border-emerald-100 hover:border-emerald-300">
+                    <div class="w-full h-36 bg-white border border-emerald-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Sertifikat Komputer.jpg" alt="Sertifikat Komputer" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-emerald-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-emerald-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-emerald-600 mb-1 uppercase tracking-wider">LKP Borju Komputer</p>
+                    <h3 class="text-base font-bold text-emerald-900 mb-1">Sertifikat Komputer</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-rose-50 border border-rose-100 hover:border-rose-300">
+                    <div class="w-full h-36 bg-white border border-rose-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Sertifikat RestApi with Laravel.jpg" alt="Sertifikat RestApi with Laravel" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-rose-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-rose-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-rose-600 mb-1 uppercase tracking-wider">Belajar Skill  Id</p>
+                    <h3 class="text-base font-bold text-rose-900 mb-1">Rest API with Laravel</h3>
+                </div>
+
+                <div class="modern-card p-5 rounded-3xl text-center fade-in-up bg-indigo-50 border border-indigo-100 hover:border-indigo-300">
+                    <div class="w-full h-36 bg-white border border-indigo-200 rounded-2xl mb-4 flex items-center justify-center card-image-container relative overflow-hidden group">
+                        <img src="assets/img/sertifikat/Word Dasar Skillpedia.png" alt="Word Dasar Skillpedia" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
+                        <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-indigo-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-indigo-600 text-2xl drop-shadow-md"></i></div>
+                    </div>
+                    <p class="text-[10px] font-bold text-indigo-600 mb-1 uppercase tracking-wider">Skillpedia</p>
+                    <h3 class="text-base font-bold text-indigo-900 mb-1">Word Dasar</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-24 bg-gradient-to-b from-white to-blue-50 px-6 border-t border-gray-100">
+        <div class="container mx-auto max-w-4xl text-center fade-in-up">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 text-primary">Tertarik berkolaborasi?</h2>
+            <p class="text-secondary text-lg mb-12 max-w-2xl mx-auto">
+                Baik itu tawaran proyek, diskusi teknologi, atau sekadar menyapa, pintu masuk (inbox) saya selalu terbuka.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <a href="https://wa.me/6285166623903" target="_blank" class="inline-flex justify-center items-center px-8 py-4 w-full sm:w-auto bg-[#25D366] text-white rounded-full font-bold text-lg hover:bg-[#1ebd5b] transition-all hover:scale-105 shadow-md hover:shadow-lg">
+                    <i class="fa-brands fa-whatsapp mr-3 text-2xl"></i> Hubungi via WhatsApp
+                </a>
+                
+                <a href="mailto:mzailani728@gmail.com" target="_blank" class="inline-flex justify-center items-center px-8 py-4 w-full sm:w-auto bg-white text-gray-800 border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-sm hover:shadow-md">
+                    <i class="fa-solid fa-envelope mr-3 text-2xl text-[#EA4335]"></i> Hubungi via Gmail
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center space-x-6">
+                <a href="#" class="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center text-secondary hover:bg-accent hover:text-white hover:border-accent transition-all shadow-sm">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center text-secondary hover:bg-accent hover:text-white hover:border-accent transition-all shadow-sm">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-blue-50 text-center border-t border-blue-100">
+        <p class="text-secondary text-sm">
+            &copy; 2026 Muhammad Zailani. Dibuat dengan <i class="fa-solid fa-heart text-red-500 mx-1"></i> dan banyak kopi.
+        </p>
+    </footer>
+
+    <div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex justify-center items-center opacity-0 transition-opacity duration-300">
+        <span id="close-modal" class="absolute top-6 right-8 text-white text-5xl cursor-pointer hover:text-accent transition-colors z-50">&times;</span>
+        <img id="modal-image" src="" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
