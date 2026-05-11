@@ -37,7 +37,7 @@
 <body class="antialiased bg-light selection:bg-accent selection:text-white relative">
 
     <nav id="navbar" class="fixed w-full top-0 z-50 glass-nav py-4">
-        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center relative z-50">
             <a href="#" class="text-xl font-bold tracking-tight text-primary">MZ<span class="text-accent">.</span></a>
             
             <div class="hidden md:flex space-x-8 items-center">
@@ -48,11 +48,19 @@
                 <a href="#kontak" class="px-5 py-2.5 bg-accent text-white text-sm font-medium rounded-full hover:bg-accentHover transition-colors shadow-md hover:shadow-lg">Hubungi Saya</a>
             </div>
 
-            <button class="md:hidden text-primary focus:outline-none" aria-label="Menu">
-                <i class="fa-solid fa-bars text-xl"></i>
+            <button id="mobile-btn" class="md:hidden text-primary focus:outline-none" aria-label="Menu">
+                <i id="mobile-icon" class="fa-solid fa-bars text-2xl transition-transform duration-300"></i>
             </button>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-md hidden flex-col items-center justify-center space-y-8 opacity-0 transition-opacity duration-300 md:hidden pt-16">
+        <a href="#beranda" class="mobile-link text-2xl font-bold text-primary hover:text-accent transition-colors">Beranda</a>
+        <a href="#tentang" class="mobile-link text-2xl font-bold text-primary hover:text-accent transition-colors">Tentang</a>
+        <a href="#proyek" class="mobile-link text-2xl font-bold text-primary hover:text-accent transition-colors">Proyek</a>
+        <a href="#sertifikat" class="mobile-link text-2xl font-bold text-primary hover:text-accent transition-colors">Sertifikat</a>
+        <a href="#kontak" class="mobile-link mt-4 px-10 py-4 bg-accent text-white text-xl font-medium rounded-full hover:bg-accentHover transition-colors shadow-lg">Hubungi Saya</a>
+    </div>
 
     <header id="beranda" class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6">
         <div class="container mx-auto max-w-6xl flex flex-col-reverse md:flex-row items-center gap-12">
@@ -157,8 +165,8 @@
                             <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
                         </div>
                         <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
-                            <span class="px-3 py-1 bg-blue-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-blue-700 shadow-sm border border-blue-200">HTML CSS</span>
-                            <span class="px-3 py-1 bg-blue-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-blue-700 shadow-sm border border-blue-200">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-blue-700 shadow-sm border border-blue-200">Flutter</span>
+                            <span class="px-3 py-1 bg-blue-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-blue-700 shadow-sm border border-blue-200">Dart</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -191,8 +199,8 @@
                             <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
                         </div>
                         <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
-                            <span class="px-3 py-1 bg-emerald-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-emerald-700 shadow-sm border border-emerald-200">HTML 5</span>
-                            <span class="px-3 py-1 bg-emerald-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-emerald-700 shadow-sm border border-emerald-200">JavaScript</span>
+                            <span class="px-3 py-1 bg-emerald-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-emerald-700 shadow-sm border border-emerald-200">Kotlin</span>
+                            <span class="px-3 py-1 bg-emerald-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-emerald-700 shadow-sm border border-emerald-200">Android Studio</span>
                         </div>
                     </div>
                     <div class="p-6">
@@ -310,7 +318,7 @@
                             <i class="fa-solid fa-expand text-white text-3xl drop-shadow-md"></i>
                         </div>
                         <div class="absolute top-4 left-4 flex flex-wrap gap-2 pointer-events-none">
-                            <span class="px-3 py-1 bg-rose-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-rose-700 shadow-sm border border-rose-200">PHP</span>
+                            <span class="px-3 py-1 bg-rose-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-rose-700 shadow-sm border border-rose-200">CodeIgniter</span>
                             <span class="px-3 py-1 bg-rose-100/90 backdrop-blur-sm text-[10px] font-bold rounded-full text-rose-700 shadow-sm border border-rose-200">MySQL</span>
                         </div>
                     </div>
@@ -528,7 +536,7 @@
                         <img src="assets/img/sertifikat/Rest API Sertifikat.jpg" alt="Rest API Sertifikat" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
                         <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-teal-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-teal-600 text-2xl drop-shadow-md"></i></div>
                     </div>
-                    <p class="text-[10px] font-bold text-teal-600 mb-1 uppercase tracking-wider">Belajar Skill id</p>
+                    <p class="text-[10px] font-bold text-teal-600 mb-1 uppercase tracking-wider">Belajar Skill</p>
                     <h3 class="text-base font-bold text-teal-900 mb-1">Rest API Sertifikat</h3>
                 </div>
 
@@ -564,7 +572,7 @@
                         <img src="assets/img/sertifikat/Sertifikat RestApi with Laravel.jpg" alt="Sertifikat RestApi with Laravel" class="preview-img cursor-pointer w-full h-full object-cover group-hover:opacity-80">
                         <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 flex items-center justify-center bg-rose-900/10 transition-opacity"><i class="fa-solid fa-magnifying-glass-plus text-rose-600 text-2xl drop-shadow-md"></i></div>
                     </div>
-                    <p class="text-[10px] font-bold text-rose-600 mb-1 uppercase tracking-wider">Belajar Skill  Id</p>
+                    <p class="text-[10px] font-bold text-rose-600 mb-1 uppercase tracking-wider">Belajar Skill</p>
                     <h3 class="text-base font-bold text-rose-900 mb-1">Rest API with Laravel</h3>
                 </div>
 
@@ -589,11 +597,11 @@
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <a href="https://wa.me/6285166623903" target="_blank" class="inline-flex justify-center items-center px-8 py-4 w-full sm:w-auto bg-[#25D366] text-white rounded-full font-bold text-lg hover:bg-[#1ebd5b] transition-all hover:scale-105 shadow-md hover:shadow-lg">
+                <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex justify-center items-center px-8 py-4 w-full sm:w-auto bg-[#25D366] text-white rounded-full font-bold text-lg hover:bg-[#1ebd5b] transition-all hover:scale-105 shadow-md hover:shadow-lg">
                     <i class="fa-brands fa-whatsapp mr-3 text-2xl"></i> Hubungi via WhatsApp
                 </a>
                 
-                <a href="mailto:mzailani728@gmail.com" target="_blank" class="inline-flex justify-center items-center px-8 py-4 w-full sm:w-auto bg-white text-gray-800 border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-sm hover:shadow-md">
+                <a href="mailto:emailanda@gmail.com" target="_blank" class="inline-flex justify-center items-center px-8 py-4 w-full sm:w-auto bg-white text-gray-800 border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-50 transition-all hover:scale-105 shadow-sm hover:shadow-md">
                     <i class="fa-solid fa-envelope mr-3 text-2xl text-[#EA4335]"></i> Hubungi via Gmail
                 </a>
             </div>

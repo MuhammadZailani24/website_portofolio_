@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalImg = document.getElementById('modal-image');
     const closeBtn = document.getElementById('close-modal');
     
-    // Ambil semua gambar yang punya class 'preview-img'
     const images = document.querySelectorAll('.preview-img');
 
     // Fungsi Buka Modal
@@ -82,11 +81,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Script Menu Mobile Hamburger
-    const mobileBtn = document.querySelector('button[aria-label="Menu"]');
-    if (mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
-            alert('Menu mobile ditekan. Anda bisa menambahkan dropdown menu di sini.');
-        });
+    // 4. Logika Menu Mobile (Hamburger)
+    const mobileBtn = document.getElementById('mobile-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileIcon = document.getElementById('mobile-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    let isMenuOpen = false;
+
+    function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        if(isMenuOpen) {
+            // Buka Menu
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => { 
+                mobileMenu.classList.remove('opacity-0'); 
+            }, 10);
+            
+            // Ubah ikon ke silang (X)
+            mobileIcon.classList.remove('fa-bars');
+            mobileIcon.classList.add('fa-xmark');
+            
+            // Hentikan scroll background
+            document.body.style.overflow = 'hidden';
+        } else {
+            // Tutup Menu
+            mobileMenu.classList.add('opacity-0');
+            
+            // Ubah ikon ke garis tiga (Hamburger)
+            mobileIcon.classList.remove('fa-xmark');
+            mobileIcon.classList.add('fa-bars');
+            
+            // Kembalikan scroll background
+            document.body.style.overflow = 'auto';
+            
+            setTimeout(() => { 
+                mobileMenu.classList.add('hidden'); 
+            }, 300);
+        }
     }
+
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', toggleMenu);
+    }
+
+    // Tutup menu otomatis saat salah satu link ditekan
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (isMenuOpen) {
+                toggleMenu();
+            }
+        });
+    });
 });
